@@ -1,0 +1,384 @@
+Enter password: *********
+Welcome to the MySQL monitor.  Commands end with ; or \g.
+Your MySQL connection id is 27
+Server version: 8.0.33 MySQL Community Server - GPL
+
+Copyright (c) 2000, 2023, Oracle and/or its affiliates.
+
+Oracle is a registered trademark of Oracle Corporation and/or its
+affiliates. Other names may be trademarks of their respective
+owners.
+
+Type 'help;' or '\h' for help. Type '\c' to clear the current input statement.
+
+mysql> use `assignment`;
+Database changed
+mysql> CREATE TABLE  emp  (   emp_no  int(11) NOT NULL,   birth_date  date NOT NULL,   first_name  varchar(14) NOT NULL,   last_name  varchar(16) NOT NULL,   gender  enum('M','F') NOT NULL,   hire_date  date NOT NULL,   salary  float(8,2) DEFAULT 7850.00) ;
+Query OK, 0 rows affected, 2 warnings (0.02 sec)
+
+mysql> INSERT INTO  emp  VALUES (10001,'1953-09-02','Georgi','Facello','M','2020-02-23',7850.00),(10002,'1964-06-02','Bezalel','Simmel','F','2020-02-23',1756.50),(10003,'1959-12-03','Parto','Bamford','M','2020-02-23',7850.00),(10004,'1954-05-01','Chirstian','Koblick','M','2020-04-15',3475.00),(10005,'1955-01-21','Kyoichi','Maliniak','M','2019-12-27',1756.50),(10006,'1953-04-20','Anneke','Preusig','F','2020-02-23',7850.00),(10007,'1957-05-23','Tzvetan','Zielinski','F','2020-02-23',7850.00),(10008,'1958-02-19','Saniya','Kalloufi','M','1994-09-15',6759.00),(10009,'1952-04-19','Sumant','Peac','F','2020-02-23',7850.00),(10010,'1963-06-01','Duangkaew','Piveteau','F','2019-12-27',1375.00),(10011,'1953-11-07','Mary','Sluis','F','1990-01-22',6759.00),(10012,'1960-10-04','Patricio','Bridgland','M','1992-12-18',3475.00),(10013,'1963-06-07','Eberhardt','Terkki','M','2020-02-23',7850.00),(10014,'1956-02-12','Berni','Genin','M','2020-02-23',1756.50),(10015,'1959-08-19','Guoxiang','Nooteboom','M','2019-12-27',1375.00),(10016,'1961-05-02','Kazuhito','Cappelletti','M','1995-01-27',3475.00),(10017,'1958-07-06','Cristinel','Bouloucos','F','1993-08-03',6759.00),(10018,'1954-06-19','Kazuhide','Peha','F','2020-02-23',7850.00),(10019,'1953-01-23','Lillian','Haddadi','M','1999-04-30',7850.00),(10020,'1952-12-24','Mayuko','Warwick','M','1991-01-26',4300.00),(10021,'1960-02-20','Ramzi','Erde','M','2020-02-23',7850.00),(10022,'1952-07-08','Shahaf','Famili','M','1995-08-22',7850.00),(10023,'1953-09-29','Bojan','Montemayor','F','2020-02-23',1756.50),(10024,'1958-09-05','Suzette','Pettey','F','1997-05-19',3475.00),(10025,'1958-10-31','Prasadram','Heyers','M','2019-12-27',1375.00),(10026,'1953-04-03','Yongqiao','Berztiss','M','1995-03-20',6759.00),(10027,'1962-07-10','Divier','Reistad','F','2020-02-23',7850.00),(10028,'1963-11-26','Domenick','Tempesti','M','1991-10-22',3475.00),(10029,'1956-12-13','Otmar','Herbst','M','2020-02-23',1756.50),(10030,'1958-07-14','Elvis','Demeyer','M','1994-02-17',4300.00),(10031,'1959-01-27','Karsten','Joslin','M','1991-09-01',7850.00),(10032,'1960-08-09','Jeong','Reistad','F','1990-06-20',6759.00),(10033,'1956-11-14','Arif','Merlo','M','2020-02-23',7850.00),(10034,'1962-12-29','Bader','Swan','M','2020-02-23',7850.00),(10035,'1953-02-08','Alain','Chappelet','M','2019-12-27',1756.50),(10036,'1959-08-10','Adamantios','Portugali','M','1992-01-03',3475.00),(10037,'1963-07-22','Pradeep','Makrucki','M','1990-12-05',7850.00),(10038,'1960-07-20','Huan','Lortz','M','2020-02-23',1756.50),(10039,'1959-10-01','Alejandro','Brender','M','2020-02-23',7850.00),(10040,'1959-09-13','Weiyi','Meriste','F','1993-02-14',4300.00),(10041,'1959-08-27','Uri','Lenart','F','2020-02-23',1756.50),(10042,'1956-02-26','Magy','Stamatiou','F','1993-03-21',7850.00),(10043,'1960-09-19','Yishay','Tzvieli','M','1990-10-20',7850.00),(10044,'1961-09-21','Mingsen','Casley','F','1994-05-21',6759.00),(10045,'1957-08-14','Moss','Shanbhogue','M','2019-12-27',1375.00),(10046,'1960-07-23','Lucien','Rosenbaum','M','1992-06-20',7850.00),(10047,'1952-06-29','Zvonko','Nyanchama','M','2020-02-23',1756.50),(10048,'1963-07-11','Florian','Syrotiuk','M','2020-04-15',3475.00),(10049,'1961-04-24','Basil','Tramer','F','1992-05-04',7850.00),(10050,'1958-05-21','Yinghua','Dredge','M','1990-12-25',4300.00),(10051,'1953-07-28','Hidefumi','Caine','M','1992-10-15',7850.00),(10052,'1961-02-26','Heping','Nitsch','M','2020-04-15',3475.00),(10053,'1954-09-13','Sanjiv','Zschoche','F','2020-02-23',1756.50),(10054,'1957-04-04','Mayumi','Schueller','M','1995-03-13',7850.00),(10055,'1956-06-06','Georgy','Dredge','M','1992-04-27',4300.00),(10056,'1961-09-01','Brendon','Bernini','F','1990-02-01',6759.00),(10057,'1954-05-30','Ebbe','Callaway','F','1992-01-15',7850.00),(10058,'1954-10-01','Berhard','McFarlin','M','2020-02-23',7850.00),(10059,'1953-09-19','Alejandro','McAlpine','F','1991-06-26',6759.00),(10060,'1961-10-15','Breannda','Billingsley','M','2020-04-15',1375.00),(10061,'1962-10-19','Tse','Herber','M','2020-02-23',7850.00),(10062,'1961-11-02','Anoosh','Peyn','M','1991-08-30',6759.00),(10063,'1952-08-06','Gino','Leonhardt','F','2020-02-23',7850.00),(10064,'1959-04-07','Udi','Jansch','M','2020-04-15',3475.00),(10065,'1963-04-14','Satosi','Awdeh','M','2019-12-27',1756.50),(10066,'1952-11-13','Kwee','Schusler','M','2020-02-23',7850.00),(10067,'1953-01-07','Claudi','Stavenow','M','2020-02-23',7850.00),(10068,'1962-11-26','Charlene','Brattka','M','2020-04-15',1756.50),(10069,'1960-09-06','Margareta','Bierman','F','2020-02-23',7850.00),(10070,'1955-08-20','Reuven','Garigliano','M','2019-12-27',1375.00),(10071,'1958-01-21','Hisao','Lipner','M','2020-02-23',1756.50),(10072,'1952-05-15','Hironoby','Sidou','F','2020-04-15',3475.00),(10073,'1954-02-23','Shir','McClurg','M','1991-12-01',7850.00),(10074,'1955-08-28','Mokhtar','Bernatsky','F','1990-08-13',6759.00),(10075,'1960-03-09','Gao','Dolinsky','F','2019-12-27',1375.00),(10076,'1952-06-13','Erez','Ritzmann','F','2020-04-15',3475.00),(10077,'1964-04-18','Mona','Azuma','M','1990-03-02',6759.00),(10078,'1959-12-25','Danel','Mondadori','F','2020-02-23',7850.00),(10079,'1961-10-05','Kshitij','Gils','F','2020-02-23',7850.00),(10080,'1957-12-03','Premal','Baek','M','2020-04-15',1756.50),(10081,'1960-12-17','Zhongwei','Rosen','M','2020-02-23',7850.00),(10082,'1963-09-09','Parviz','Lortz','M','1990-01-03',7850.00),(10083,'1959-07-23','Vishv','Zockler','M','2020-02-23',1756.50),(10084,'1960-05-25','Tuval','Kalloufi','M','1995-12-15',3475.00),(10085,'1962-11-07','Kenroku','Malabarba','M','1994-04-09',4300.00),(10086,'1962-11-19','Somnath','Foote','M','1990-02-16',6759.00),(10087,'1959-07-23','Xinglin','Eugenio','F','2020-02-23',7850.00),(10088,'1954-02-25','Jungsoon','Syrzycki','F','2020-04-15',3475.00),(10089,'1963-03-21','Sudharsan','Flasterstein','F','2020-02-23',1756.50),(10090,'1961-05-30','Kendra','Hofting','M','2019-12-27',1375.00),(10091,'1955-10-04','Amabile','Gomatam','M','1992-11-18',7850.00),(10092,'1964-10-18','Valdiodio','Niizuma','F','2020-04-15',1756.50),(10093,'1964-06-11','Sailaja','Desikan','M','1996-11-05',7850.00),(10094,'1957-05-25','Arumugam','Ossenbruggen','F','2020-02-23',7850.00),(10095,'1965-01-03','Hilari','Morton','M','2019-12-27',1756.50),(10096,'1954-09-16','Jayson','Mandell','M','1990-01-14',3475.00),(10097,'1952-02-27','Remzi','Waschkowski','M','1990-09-15',7850.00),(10098,'1961-09-23','Sreekrishna','Servieres','F','2020-02-23',1756.50),(10099,'1956-05-25','Valter','Sullins','F','2020-02-23',7850.00),(10100,'1953-04-21','Hironobu','Haraldson','F','2020-04-15',1375.00);
+Query OK, 100 rows affected (0.01 sec)
+Records: 100  Duplicates: 0  Warnings: 0
+
+mysql> select * from emp;
++--------+------------+-------------+--------------+--------+------------+---------+
+| emp_no | birth_date | first_name  | last_name    | gender | hire_date  | salary  |
++--------+------------+-------------+--------------+--------+------------+---------+
+|  10001 | 1953-09-02 | Georgi      | Facello      | M      | 2020-02-23 | 7850.00 |
+|  10002 | 1964-06-02 | Bezalel     | Simmel       | F      | 2020-02-23 | 1756.50 |
+|  10003 | 1959-12-03 | Parto       | Bamford      | M      | 2020-02-23 | 7850.00 |
+|  10004 | 1954-05-01 | Chirstian   | Koblick      | M      | 2020-04-15 | 3475.00 |
+|  10005 | 1955-01-21 | Kyoichi     | Maliniak     | M      | 2019-12-27 | 1756.50 |
+|  10006 | 1953-04-20 | Anneke      | Preusig      | F      | 2020-02-23 | 7850.00 |
+|  10007 | 1957-05-23 | Tzvetan     | Zielinski    | F      | 2020-02-23 | 7850.00 |
+|  10008 | 1958-02-19 | Saniya      | Kalloufi     | M      | 1994-09-15 | 6759.00 |
+|  10009 | 1952-04-19 | Sumant      | Peac         | F      | 2020-02-23 | 7850.00 |
+|  10010 | 1963-06-01 | Duangkaew   | Piveteau     | F      | 2019-12-27 | 1375.00 |
+|  10011 | 1953-11-07 | Mary        | Sluis        | F      | 1990-01-22 | 6759.00 |
+|  10012 | 1960-10-04 | Patricio    | Bridgland    | M      | 1992-12-18 | 3475.00 |
+|  10013 | 1963-06-07 | Eberhardt   | Terkki       | M      | 2020-02-23 | 7850.00 |
+|  10014 | 1956-02-12 | Berni       | Genin        | M      | 2020-02-23 | 1756.50 |
+|  10015 | 1959-08-19 | Guoxiang    | Nooteboom    | M      | 2019-12-27 | 1375.00 |
+|  10016 | 1961-05-02 | Kazuhito    | Cappelletti  | M      | 1995-01-27 | 3475.00 |
+|  10017 | 1958-07-06 | Cristinel   | Bouloucos    | F      | 1993-08-03 | 6759.00 |
+|  10018 | 1954-06-19 | Kazuhide    | Peha         | F      | 2020-02-23 | 7850.00 |
+|  10019 | 1953-01-23 | Lillian     | Haddadi      | M      | 1999-04-30 | 7850.00 |
+|  10020 | 1952-12-24 | Mayuko      | Warwick      | M      | 1991-01-26 | 4300.00 |
+|  10021 | 1960-02-20 | Ramzi       | Erde         | M      | 2020-02-23 | 7850.00 |
+|  10022 | 1952-07-08 | Shahaf      | Famili       | M      | 1995-08-22 | 7850.00 |
+|  10023 | 1953-09-29 | Bojan       | Montemayor   | F      | 2020-02-23 | 1756.50 |
+|  10024 | 1958-09-05 | Suzette     | Pettey       | F      | 1997-05-19 | 3475.00 |
+|  10025 | 1958-10-31 | Prasadram   | Heyers       | M      | 2019-12-27 | 1375.00 |
+|  10026 | 1953-04-03 | Yongqiao    | Berztiss     | M      | 1995-03-20 | 6759.00 |
+|  10027 | 1962-07-10 | Divier      | Reistad      | F      | 2020-02-23 | 7850.00 |
+|  10028 | 1963-11-26 | Domenick    | Tempesti     | M      | 1991-10-22 | 3475.00 |
+|  10029 | 1956-12-13 | Otmar       | Herbst       | M      | 2020-02-23 | 1756.50 |
+|  10030 | 1958-07-14 | Elvis       | Demeyer      | M      | 1994-02-17 | 4300.00 |
+|  10031 | 1959-01-27 | Karsten     | Joslin       | M      | 1991-09-01 | 7850.00 |
+|  10032 | 1960-08-09 | Jeong       | Reistad      | F      | 1990-06-20 | 6759.00 |
+|  10033 | 1956-11-14 | Arif        | Merlo        | M      | 2020-02-23 | 7850.00 |
+|  10034 | 1962-12-29 | Bader       | Swan         | M      | 2020-02-23 | 7850.00 |
+|  10035 | 1953-02-08 | Alain       | Chappelet    | M      | 2019-12-27 | 1756.50 |
+|  10036 | 1959-08-10 | Adamantios  | Portugali    | M      | 1992-01-03 | 3475.00 |
+|  10037 | 1963-07-22 | Pradeep     | Makrucki     | M      | 1990-12-05 | 7850.00 |
+|  10038 | 1960-07-20 | Huan        | Lortz        | M      | 2020-02-23 | 1756.50 |
+|  10039 | 1959-10-01 | Alejandro   | Brender      | M      | 2020-02-23 | 7850.00 |
+|  10040 | 1959-09-13 | Weiyi       | Meriste      | F      | 1993-02-14 | 4300.00 |
+|  10041 | 1959-08-27 | Uri         | Lenart       | F      | 2020-02-23 | 1756.50 |
+|  10042 | 1956-02-26 | Magy        | Stamatiou    | F      | 1993-03-21 | 7850.00 |
+|  10043 | 1960-09-19 | Yishay      | Tzvieli      | M      | 1990-10-20 | 7850.00 |
+|  10044 | 1961-09-21 | Mingsen     | Casley       | F      | 1994-05-21 | 6759.00 |
+|  10045 | 1957-08-14 | Moss        | Shanbhogue   | M      | 2019-12-27 | 1375.00 |
+|  10046 | 1960-07-23 | Lucien      | Rosenbaum    | M      | 1992-06-20 | 7850.00 |
+|  10047 | 1952-06-29 | Zvonko      | Nyanchama    | M      | 2020-02-23 | 1756.50 |
+|  10048 | 1963-07-11 | Florian     | Syrotiuk     | M      | 2020-04-15 | 3475.00 |
+|  10049 | 1961-04-24 | Basil       | Tramer       | F      | 1992-05-04 | 7850.00 |
+|  10050 | 1958-05-21 | Yinghua     | Dredge       | M      | 1990-12-25 | 4300.00 |
+|  10051 | 1953-07-28 | Hidefumi    | Caine        | M      | 1992-10-15 | 7850.00 |
+|  10052 | 1961-02-26 | Heping      | Nitsch       | M      | 2020-04-15 | 3475.00 |
+|  10053 | 1954-09-13 | Sanjiv      | Zschoche     | F      | 2020-02-23 | 1756.50 |
+|  10054 | 1957-04-04 | Mayumi      | Schueller    | M      | 1995-03-13 | 7850.00 |
+|  10055 | 1956-06-06 | Georgy      | Dredge       | M      | 1992-04-27 | 4300.00 |
+|  10056 | 1961-09-01 | Brendon     | Bernini      | F      | 1990-02-01 | 6759.00 |
+|  10057 | 1954-05-30 | Ebbe        | Callaway     | F      | 1992-01-15 | 7850.00 |
+|  10058 | 1954-10-01 | Berhard     | McFarlin     | M      | 2020-02-23 | 7850.00 |
+|  10059 | 1953-09-19 | Alejandro   | McAlpine     | F      | 1991-06-26 | 6759.00 |
+|  10060 | 1961-10-15 | Breannda    | Billingsley  | M      | 2020-04-15 | 1375.00 |
+|  10061 | 1962-10-19 | Tse         | Herber       | M      | 2020-02-23 | 7850.00 |
+|  10062 | 1961-11-02 | Anoosh      | Peyn         | M      | 1991-08-30 | 6759.00 |
+|  10063 | 1952-08-06 | Gino        | Leonhardt    | F      | 2020-02-23 | 7850.00 |
+|  10064 | 1959-04-07 | Udi         | Jansch       | M      | 2020-04-15 | 3475.00 |
+|  10065 | 1963-04-14 | Satosi      | Awdeh        | M      | 2019-12-27 | 1756.50 |
+|  10066 | 1952-11-13 | Kwee        | Schusler     | M      | 2020-02-23 | 7850.00 |
+|  10067 | 1953-01-07 | Claudi      | Stavenow     | M      | 2020-02-23 | 7850.00 |
+|  10068 | 1962-11-26 | Charlene    | Brattka      | M      | 2020-04-15 | 1756.50 |
+|  10069 | 1960-09-06 | Margareta   | Bierman      | F      | 2020-02-23 | 7850.00 |
+|  10070 | 1955-08-20 | Reuven      | Garigliano   | M      | 2019-12-27 | 1375.00 |
+|  10071 | 1958-01-21 | Hisao       | Lipner       | M      | 2020-02-23 | 1756.50 |
+|  10072 | 1952-05-15 | Hironoby    | Sidou        | F      | 2020-04-15 | 3475.00 |
+|  10073 | 1954-02-23 | Shir        | McClurg      | M      | 1991-12-01 | 7850.00 |
+|  10074 | 1955-08-28 | Mokhtar     | Bernatsky    | F      | 1990-08-13 | 6759.00 |
+|  10075 | 1960-03-09 | Gao         | Dolinsky     | F      | 2019-12-27 | 1375.00 |
+|  10076 | 1952-06-13 | Erez        | Ritzmann     | F      | 2020-04-15 | 3475.00 |
+|  10077 | 1964-04-18 | Mona        | Azuma        | M      | 1990-03-02 | 6759.00 |
+|  10078 | 1959-12-25 | Danel       | Mondadori    | F      | 2020-02-23 | 7850.00 |
+|  10079 | 1961-10-05 | Kshitij     | Gils         | F      | 2020-02-23 | 7850.00 |
+|  10080 | 1957-12-03 | Premal      | Baek         | M      | 2020-04-15 | 1756.50 |
+|  10081 | 1960-12-17 | Zhongwei    | Rosen        | M      | 2020-02-23 | 7850.00 |
+|  10082 | 1963-09-09 | Parviz      | Lortz        | M      | 1990-01-03 | 7850.00 |
+|  10083 | 1959-07-23 | Vishv       | Zockler      | M      | 2020-02-23 | 1756.50 |
+|  10084 | 1960-05-25 | Tuval       | Kalloufi     | M      | 1995-12-15 | 3475.00 |
+|  10085 | 1962-11-07 | Kenroku     | Malabarba    | M      | 1994-04-09 | 4300.00 |
+|  10086 | 1962-11-19 | Somnath     | Foote        | M      | 1990-02-16 | 6759.00 |
+|  10087 | 1959-07-23 | Xinglin     | Eugenio      | F      | 2020-02-23 | 7850.00 |
+|  10088 | 1954-02-25 | Jungsoon    | Syrzycki     | F      | 2020-04-15 | 3475.00 |
+|  10089 | 1963-03-21 | Sudharsan   | Flasterstein | F      | 2020-02-23 | 1756.50 |
+|  10090 | 1961-05-30 | Kendra      | Hofting      | M      | 2019-12-27 | 1375.00 |
+|  10091 | 1955-10-04 | Amabile     | Gomatam      | M      | 1992-11-18 | 7850.00 |
+|  10092 | 1964-10-18 | Valdiodio   | Niizuma      | F      | 2020-04-15 | 1756.50 |
+|  10093 | 1964-06-11 | Sailaja     | Desikan      | M      | 1996-11-05 | 7850.00 |
+|  10094 | 1957-05-25 | Arumugam    | Ossenbruggen | F      | 2020-02-23 | 7850.00 |
+|  10095 | 1965-01-03 | Hilari      | Morton       | M      | 2019-12-27 | 1756.50 |
+|  10096 | 1954-09-16 | Jayson      | Mandell      | M      | 1990-01-14 | 3475.00 |
+|  10097 | 1952-02-27 | Remzi       | Waschkowski  | M      | 1990-09-15 | 7850.00 |
+|  10098 | 1961-09-23 | Sreekrishna | Servieres    | F      | 2020-02-23 | 1756.50 |
+|  10099 | 1956-05-25 | Valter      | Sullins      | F      | 2020-02-23 | 7850.00 |
+|  10100 | 1953-04-21 | Hironobu    | Haraldson    | F      | 2020-04-15 | 1375.00 |
++--------+------------+-------------+--------------+--------+------------+---------+
+100 rows in set (0.00 sec)
+
+mysql> alter table empadd column dept_no INT;
+ERROR 1064 (42000): You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'column dept_no INT' at line 1
+mysql> alter table emp add column dept_no INT;
+Query OK, 0 rows affected (0.01 sec)
+Records: 0  Duplicates: 0  Warnings: 0
+
+mysql> alter table emp rename column emp_no to emp_id;
+Query OK, 0 rows affected (0.01 sec)
+Records: 0  Duplicates: 0  Warnings: 0
+
+mysql> update emp set dept_no = case
+    -> when emp_id % 2 = 0 then 20
+    -> when emp_id % 3 = 0 then 30
+    -> when emp_id % 4 = 0 then 40
+    -> when emp_id % 5 = 0 then 50
+    -> else 10
+    -> end;
+Query OK, 100 rows affected (0.01 sec)
+Rows matched: 100  Changed: 100  Warnings: 0
+
+mysql> select * from emp;
++--------+------------+-------------+--------------+--------+------------+---------+---------+
+| emp_id | birth_date | first_name  | last_name    | gender | hire_date  | salary  | dept_no |
++--------+------------+-------------+--------------+--------+------------+---------+---------+
+|  10001 | 1953-09-02 | Georgi      | Facello      | M      | 2020-02-23 | 7850.00 |      10 |
+|  10002 | 1964-06-02 | Bezalel     | Simmel       | F      | 2020-02-23 | 1756.50 |      20 |
+|  10003 | 1959-12-03 | Parto       | Bamford      | M      | 2020-02-23 | 7850.00 |      10 |
+|  10004 | 1954-05-01 | Chirstian   | Koblick      | M      | 2020-04-15 | 3475.00 |      20 |
+|  10005 | 1955-01-21 | Kyoichi     | Maliniak     | M      | 2019-12-27 | 1756.50 |      30 |
+|  10006 | 1953-04-20 | Anneke      | Preusig      | F      | 2020-02-23 | 7850.00 |      20 |
+|  10007 | 1957-05-23 | Tzvetan     | Zielinski    | F      | 2020-02-23 | 7850.00 |      10 |
+|  10008 | 1958-02-19 | Saniya      | Kalloufi     | M      | 1994-09-15 | 6759.00 |      20 |
+|  10009 | 1952-04-19 | Sumant      | Peac         | F      | 2020-02-23 | 7850.00 |      10 |
+|  10010 | 1963-06-01 | Duangkaew   | Piveteau     | F      | 2019-12-27 | 1375.00 |      20 |
+|  10011 | 1953-11-07 | Mary        | Sluis        | F      | 1990-01-22 | 6759.00 |      30 |
+|  10012 | 1960-10-04 | Patricio    | Bridgland    | M      | 1992-12-18 | 3475.00 |      20 |
+|  10013 | 1963-06-07 | Eberhardt   | Terkki       | M      | 2020-02-23 | 7850.00 |      10 |
+|  10014 | 1956-02-12 | Berni       | Genin        | M      | 2020-02-23 | 1756.50 |      20 |
+|  10015 | 1959-08-19 | Guoxiang    | Nooteboom    | M      | 2019-12-27 | 1375.00 |      50 |
+|  10016 | 1961-05-02 | Kazuhito    | Cappelletti  | M      | 1995-01-27 | 3475.00 |      20 |
+|  10017 | 1958-07-06 | Cristinel   | Bouloucos    | F      | 1993-08-03 | 6759.00 |      30 |
+|  10018 | 1954-06-19 | Kazuhide    | Peha         | F      | 2020-02-23 | 7850.00 |      20 |
+|  10019 | 1953-01-23 | Lillian     | Haddadi      | M      | 1999-04-30 | 7850.00 |      10 |
+|  10020 | 1952-12-24 | Mayuko      | Warwick      | M      | 1991-01-26 | 4300.00 |      20 |
+|  10021 | 1960-02-20 | Ramzi       | Erde         | M      | 2020-02-23 | 7850.00 |      10 |
+|  10022 | 1952-07-08 | Shahaf      | Famili       | M      | 1995-08-22 | 7850.00 |      20 |
+|  10023 | 1953-09-29 | Bojan       | Montemayor   | F      | 2020-02-23 | 1756.50 |      30 |
+|  10024 | 1958-09-05 | Suzette     | Pettey       | F      | 1997-05-19 | 3475.00 |      20 |
+|  10025 | 1958-10-31 | Prasadram   | Heyers       | M      | 2019-12-27 | 1375.00 |      50 |
+|  10026 | 1953-04-03 | Yongqiao    | Berztiss     | M      | 1995-03-20 | 6759.00 |      20 |
+|  10027 | 1962-07-10 | Divier      | Reistad      | F      | 2020-02-23 | 7850.00 |      10 |
+|  10028 | 1963-11-26 | Domenick    | Tempesti     | M      | 1991-10-22 | 3475.00 |      20 |
+|  10029 | 1956-12-13 | Otmar       | Herbst       | M      | 2020-02-23 | 1756.50 |      30 |
+|  10030 | 1958-07-14 | Elvis       | Demeyer      | M      | 1994-02-17 | 4300.00 |      20 |
+|  10031 | 1959-01-27 | Karsten     | Joslin       | M      | 1991-09-01 | 7850.00 |      10 |
+|  10032 | 1960-08-09 | Jeong       | Reistad      | F      | 1990-06-20 | 6759.00 |      20 |
+|  10033 | 1956-11-14 | Arif        | Merlo        | M      | 2020-02-23 | 7850.00 |      10 |
+|  10034 | 1962-12-29 | Bader       | Swan         | M      | 2020-02-23 | 7850.00 |      20 |
+|  10035 | 1953-02-08 | Alain       | Chappelet    | M      | 2019-12-27 | 1756.50 |      30 |
+|  10036 | 1959-08-10 | Adamantios  | Portugali    | M      | 1992-01-03 | 3475.00 |      20 |
+|  10037 | 1963-07-22 | Pradeep     | Makrucki     | M      | 1990-12-05 | 7850.00 |      10 |
+|  10038 | 1960-07-20 | Huan        | Lortz        | M      | 2020-02-23 | 1756.50 |      20 |
+|  10039 | 1959-10-01 | Alejandro   | Brender      | M      | 2020-02-23 | 7850.00 |      10 |
+|  10040 | 1959-09-13 | Weiyi       | Meriste      | F      | 1993-02-14 | 4300.00 |      20 |
+|  10041 | 1959-08-27 | Uri         | Lenart       | F      | 2020-02-23 | 1756.50 |      30 |
+|  10042 | 1956-02-26 | Magy        | Stamatiou    | F      | 1993-03-21 | 7850.00 |      20 |
+|  10043 | 1960-09-19 | Yishay      | Tzvieli      | M      | 1990-10-20 | 7850.00 |      10 |
+|  10044 | 1961-09-21 | Mingsen     | Casley       | F      | 1994-05-21 | 6759.00 |      20 |
+|  10045 | 1957-08-14 | Moss        | Shanbhogue   | M      | 2019-12-27 | 1375.00 |      50 |
+|  10046 | 1960-07-23 | Lucien      | Rosenbaum    | M      | 1992-06-20 | 7850.00 |      20 |
+|  10047 | 1952-06-29 | Zvonko      | Nyanchama    | M      | 2020-02-23 | 1756.50 |      30 |
+|  10048 | 1963-07-11 | Florian     | Syrotiuk     | M      | 2020-04-15 | 3475.00 |      20 |
+|  10049 | 1961-04-24 | Basil       | Tramer       | F      | 1992-05-04 | 7850.00 |      10 |
+|  10050 | 1958-05-21 | Yinghua     | Dredge       | M      | 1990-12-25 | 4300.00 |      20 |
+|  10051 | 1953-07-28 | Hidefumi    | Caine        | M      | 1992-10-15 | 7850.00 |      10 |
+|  10052 | 1961-02-26 | Heping      | Nitsch       | M      | 2020-04-15 | 3475.00 |      20 |
+|  10053 | 1954-09-13 | Sanjiv      | Zschoche     | F      | 2020-02-23 | 1756.50 |      30 |
+|  10054 | 1957-04-04 | Mayumi      | Schueller    | M      | 1995-03-13 | 7850.00 |      20 |
+|  10055 | 1956-06-06 | Georgy      | Dredge       | M      | 1992-04-27 | 4300.00 |      50 |
+|  10056 | 1961-09-01 | Brendon     | Bernini      | F      | 1990-02-01 | 6759.00 |      20 |
+|  10057 | 1954-05-30 | Ebbe        | Callaway     | F      | 1992-01-15 | 7850.00 |      10 |
+|  10058 | 1954-10-01 | Berhard     | McFarlin     | M      | 2020-02-23 | 7850.00 |      20 |
+|  10059 | 1953-09-19 | Alejandro   | McAlpine     | F      | 1991-06-26 | 6759.00 |      30 |
+|  10060 | 1961-10-15 | Breannda    | Billingsley  | M      | 2020-04-15 | 1375.00 |      20 |
+|  10061 | 1962-10-19 | Tse         | Herber       | M      | 2020-02-23 | 7850.00 |      10 |
+|  10062 | 1961-11-02 | Anoosh      | Peyn         | M      | 1991-08-30 | 6759.00 |      20 |
+|  10063 | 1952-08-06 | Gino        | Leonhardt    | F      | 2020-02-23 | 7850.00 |      10 |
+|  10064 | 1959-04-07 | Udi         | Jansch       | M      | 2020-04-15 | 3475.00 |      20 |
+|  10065 | 1963-04-14 | Satosi      | Awdeh        | M      | 2019-12-27 | 1756.50 |      30 |
+|  10066 | 1952-11-13 | Kwee        | Schusler     | M      | 2020-02-23 | 7850.00 |      20 |
+|  10067 | 1953-01-07 | Claudi      | Stavenow     | M      | 2020-02-23 | 7850.00 |      10 |
+|  10068 | 1962-11-26 | Charlene    | Brattka      | M      | 2020-04-15 | 1756.50 |      20 |
+|  10069 | 1960-09-06 | Margareta   | Bierman      | F      | 2020-02-23 | 7850.00 |      10 |
+|  10070 | 1955-08-20 | Reuven      | Garigliano   | M      | 2019-12-27 | 1375.00 |      20 |
+|  10071 | 1958-01-21 | Hisao       | Lipner       | M      | 2020-02-23 | 1756.50 |      30 |
+|  10072 | 1952-05-15 | Hironoby    | Sidou        | F      | 2020-04-15 | 3475.00 |      20 |
+|  10073 | 1954-02-23 | Shir        | McClurg      | M      | 1991-12-01 | 7850.00 |      10 |
+|  10074 | 1955-08-28 | Mokhtar     | Bernatsky    | F      | 1990-08-13 | 6759.00 |      20 |
+|  10075 | 1960-03-09 | Gao         | Dolinsky     | F      | 2019-12-27 | 1375.00 |      50 |
+|  10076 | 1952-06-13 | Erez        | Ritzmann     | F      | 2020-04-15 | 3475.00 |      20 |
+|  10077 | 1964-04-18 | Mona        | Azuma        | M      | 1990-03-02 | 6759.00 |      30 |
+|  10078 | 1959-12-25 | Danel       | Mondadori    | F      | 2020-02-23 | 7850.00 |      20 |
+|  10079 | 1961-10-05 | Kshitij     | Gils         | F      | 2020-02-23 | 7850.00 |      10 |
+|  10080 | 1957-12-03 | Premal      | Baek         | M      | 2020-04-15 | 1756.50 |      20 |
+|  10081 | 1960-12-17 | Zhongwei    | Rosen        | M      | 2020-02-23 | 7850.00 |      10 |
+|  10082 | 1963-09-09 | Parviz      | Lortz        | M      | 1990-01-03 | 7850.00 |      20 |
+|  10083 | 1959-07-23 | Vishv       | Zockler      | M      | 2020-02-23 | 1756.50 |      30 |
+|  10084 | 1960-05-25 | Tuval       | Kalloufi     | M      | 1995-12-15 | 3475.00 |      20 |
+|  10085 | 1962-11-07 | Kenroku     | Malabarba    | M      | 1994-04-09 | 4300.00 |      50 |
+|  10086 | 1962-11-19 | Somnath     | Foote        | M      | 1990-02-16 | 6759.00 |      20 |
+|  10087 | 1959-07-23 | Xinglin     | Eugenio      | F      | 2020-02-23 | 7850.00 |      10 |
+|  10088 | 1954-02-25 | Jungsoon    | Syrzycki     | F      | 2020-04-15 | 3475.00 |      20 |
+|  10089 | 1963-03-21 | Sudharsan   | Flasterstein | F      | 2020-02-23 | 1756.50 |      30 |
+|  10090 | 1961-05-30 | Kendra      | Hofting      | M      | 2019-12-27 | 1375.00 |      20 |
+|  10091 | 1955-10-04 | Amabile     | Gomatam      | M      | 1992-11-18 | 7850.00 |      10 |
+|  10092 | 1964-10-18 | Valdiodio   | Niizuma      | F      | 2020-04-15 | 1756.50 |      20 |
+|  10093 | 1964-06-11 | Sailaja     | Desikan      | M      | 1996-11-05 | 7850.00 |      10 |
+|  10094 | 1957-05-25 | Arumugam    | Ossenbruggen | F      | 2020-02-23 | 7850.00 |      20 |
+|  10095 | 1965-01-03 | Hilari      | Morton       | M      | 2019-12-27 | 1756.50 |      30 |
+|  10096 | 1954-09-16 | Jayson      | Mandell      | M      | 1990-01-14 | 3475.00 |      20 |
+|  10097 | 1952-02-27 | Remzi       | Waschkowski  | M      | 1990-09-15 | 7850.00 |      10 |
+|  10098 | 1961-09-23 | Sreekrishna | Servieres    | F      | 2020-02-23 | 1756.50 |      20 |
+|  10099 | 1956-05-25 | Valter      | Sullins      | F      | 2020-02-23 | 7850.00 |      10 |
+|  10100 | 1953-04-21 | Hironobu    | Haraldson    | F      | 2020-04-15 | 1375.00 |      20 |
++--------+------------+-------------+--------------+--------+------------+---------+---------+
+100 rows in set (0.00 sec)
+
+mysql> create UNIQUE index emp_uni on emp(emp_id);
+Query OK, 0 rows affected (0.06 sec)
+Records: 0  Duplicates: 0  Warnings: 0
+
+mysql> show index from emp;
++-------+------------+----------+--------------+-------------+-----------+-------------+----------+--------+------+------------+---------+---------------+---------+------------+
+| Table | Non_unique | Key_name | Seq_in_index | Column_name | Collation | Cardinality | Sub_part | Packed | Null | Index_type | Comment | Index_comment | Visible | Expression |
++-------+------------+----------+--------------+-------------+-----------+-------------+----------+--------+------+------------+---------+---------------+---------+------------+
+| emp   |          0 | emp_uni  |            1 | emp_id      | A         |         100 |     NULL |   NULL |      | BTREE      |         |               | YES     | NULL       |
++-------+------------+----------+--------------+-------------+-----------+-------------+----------+--------+------+------------+---------+---------------+---------+------------+
+1 row in set (0.00 sec)
+
+mysql> alter table emp rename column emp_id to emp_no;
+Query OK, 0 rows affected (0.01 sec)
+Records: 0  Duplicates: 0  Warnings: 0
+
+mysql> create view emp_sal as select emp_no, CONCAT(first_name,' ',last_name) as employee,
+    -> salary from emp order by salary desc;
+Query OK, 0 rows affected (0.00 sec)
+
+mysql> select * from emp_sal;
++--------+------------------------+---------+
+| emp_no | employee               | salary  |
++--------+------------------------+---------+
+|  10001 | Georgi Facello         | 7850.00 |
+|  10087 | Xinglin Eugenio        | 7850.00 |
+|  10003 | Parto Bamford          | 7850.00 |
+|  10042 | Magy Stamatiou         | 7850.00 |
+|  10043 | Yishay Tzvieli         | 7850.00 |
+|  10006 | Anneke Preusig         | 7850.00 |
+|  10007 | Tzvetan Zielinski      | 7850.00 |
+|  10091 | Amabile Gomatam        | 7850.00 |
+|  10009 | Sumant Peac            | 7850.00 |
+|  10093 | Sailaja Desikan        | 7850.00 |
+|  10046 | Lucien Rosenbaum       | 7850.00 |
+|  10094 | Arumugam Ossenbruggen  | 7850.00 |
+|  10013 | Eberhardt Terkki       | 7850.00 |
+|  10097 | Remzi Waschkowski      | 7850.00 |
+|  10049 | Basil Tramer           | 7850.00 |
+|  10099 | Valter Sullins         | 7850.00 |
+|  10051 | Hidefumi Caine         | 7850.00 |
+|  10018 | Kazuhide Peha          | 7850.00 |
+|  10019 | Lillian Haddadi        | 7850.00 |
+|  10054 | Mayumi Schueller       | 7850.00 |
+|  10021 | Ramzi Erde             | 7850.00 |
+|  10022 | Shahaf Famili          | 7850.00 |
+|  10057 | Ebbe Callaway          | 7850.00 |
+|  10058 | Berhard McFarlin       | 7850.00 |
+|  10061 | Tse Herber             | 7850.00 |
+|  10063 | Gino Leonhardt         | 7850.00 |
+|  10027 | Divier Reistad         | 7850.00 |
+|  10066 | Kwee Schusler          | 7850.00 |
+|  10067 | Claudi Stavenow        | 7850.00 |
+|  10069 | Margareta Bierman      | 7850.00 |
+|  10031 | Karsten Joslin         | 7850.00 |
+|  10073 | Shir McClurg           | 7850.00 |
+|  10033 | Arif Merlo             | 7850.00 |
+|  10034 | Bader Swan             | 7850.00 |
+|  10078 | Danel Mondadori        | 7850.00 |
+|  10079 | Kshitij Gils           | 7850.00 |
+|  10037 | Pradeep Makrucki       | 7850.00 |
+|  10081 | Zhongwei Rosen         | 7850.00 |
+|  10039 | Alejandro Brender      | 7850.00 |
+|  10082 | Parviz Lortz           | 7850.00 |
+|  10032 | Jeong Reistad          | 6759.00 |
+|  10008 | Saniya Kalloufi        | 6759.00 |
+|  10011 | Mary Sluis             | 6759.00 |
+|  10056 | Brendon Bernini        | 6759.00 |
+|  10062 | Anoosh Peyn            | 6759.00 |
+|  10017 | Cristinel Bouloucos    | 6759.00 |
+|  10044 | Mingsen Casley         | 6759.00 |
+|  10077 | Mona Azuma             | 6759.00 |
+|  10059 | Alejandro McAlpine     | 6759.00 |
+|  10026 | Yongqiao Berztiss      | 6759.00 |
+|  10074 | Mokhtar Bernatsky      | 6759.00 |
+|  10086 | Somnath Foote          | 6759.00 |
+|  10030 | Elvis Demeyer          | 4300.00 |
+|  10085 | Kenroku Malabarba      | 4300.00 |
+|  10050 | Yinghua Dredge         | 4300.00 |
+|  10055 | Georgy Dredge          | 4300.00 |
+|  10040 | Weiyi Meriste          | 4300.00 |
+|  10020 | Mayuko Warwick         | 4300.00 |
+|  10076 | Erez Ritzmann          | 3475.00 |
+|  10004 | Chirstian Koblick      | 3475.00 |
+|  10064 | Udi Jansch             | 3475.00 |
+|  10084 | Tuval Kalloufi         | 3475.00 |
+|  10012 | Patricio Bridgland     | 3475.00 |
+|  10088 | Jungsoon Syrzycki      | 3475.00 |
+|  10016 | Kazuhito Cappelletti   | 3475.00 |
+|  10096 | Jayson Mandell         | 3475.00 |
+|  10024 | Suzette Pettey         | 3475.00 |
+|  10028 | Domenick Tempesti      | 3475.00 |
+|  10036 | Adamantios Portugali   | 3475.00 |
+|  10048 | Florian Syrotiuk       | 3475.00 |
+|  10052 | Heping Nitsch          | 3475.00 |
+|  10072 | Hironoby Sidou         | 3475.00 |
+|  10002 | Bezalel Simmel         | 1756.50 |
+|  10005 | Kyoichi Maliniak       | 1756.50 |
+|  10023 | Bojan Montemayor       | 1756.50 |
+|  10071 | Hisao Lipner           | 1756.50 |
+|  10041 | Uri Lenart             | 1756.50 |
+|  10080 | Premal Baek            | 1756.50 |
+|  10038 | Huan Lortz             | 1756.50 |
+|  10047 | Zvonko Nyanchama       | 1756.50 |
+|  10083 | Vishv Zockler          | 1756.50 |
+|  10035 | Alain Chappelet        | 1756.50 |
+|  10029 | Otmar Herbst           | 1756.50 |
+|  10065 | Satosi Awdeh           | 1756.50 |
+|  10089 | Sudharsan Flasterstein | 1756.50 |
+|  10053 | Sanjiv Zschoche        | 1756.50 |
+|  10092 | Valdiodio Niizuma      | 1756.50 |
+|  10014 | Berni Genin            | 1756.50 |
+|  10068 | Charlene Brattka       | 1756.50 |
+|  10095 | Hilari Morton          | 1756.50 |
+|  10098 | Sreekrishna Servieres  | 1756.50 |
+|  10010 | Duangkaew Piveteau     | 1375.00 |
+|  10015 | Guoxiang Nooteboom     | 1375.00 |
+|  10075 | Gao Dolinsky           | 1375.00 |
+|  10060 | Breannda Billingsley   | 1375.00 |
+|  10090 | Kendra Hofting         | 1375.00 |
+|  10045 | Moss Shanbhogue        | 1375.00 |
+|  10025 | Prasadram Heyers       | 1375.00 |
+|  10070 | Reuven Garigliano      | 1375.00 |
+|  10100 | Hironobu Haraldson     | 1375.00 |
++--------+------------------------+---------+
+100 rows in set (0.00 sec)
+
+mysql>

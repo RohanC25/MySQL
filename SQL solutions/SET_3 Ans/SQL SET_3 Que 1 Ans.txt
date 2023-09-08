@@ -1,0 +1,13 @@
+---> SQL SET_3 Que 1 Answer
+
+
+
+CREATE DEFINER=`root`@`localhost` PROCEDURE `order_status`(year INT, month INT)
+BEGIN
+select ordernumber,
+	orderdate,
+    status from orders
+    where year(orderdate) = year
+    and 
+    month(orderdate) = month ;
+END

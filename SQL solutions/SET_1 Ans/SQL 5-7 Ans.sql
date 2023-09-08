@@ -1,0 +1,66 @@
+create table product 
+(
+product_id INT not null UNIQUE auto_increment,
+product_name varchar(25) not null UNIQUE,
+description varchar(100),
+supplier_id int,
+primary key (product_id)
+);
+alter table product
+auto_increment = 100;
+
+create table suppliers
+(
+supplier_id INT auto_increment,
+supplier_name varchar(100) not null,
+location varchar(100),
+primary key (supplier_id)
+);
+alter table suppliers
+auto_increment = 1000;
+
+create table stock 
+(
+id INT UNIQUE auto_increment,
+product_id INT,
+balance_stock INT,
+primary key (id),
+foreign key (product_id) references product(product_id)
+on delete set null
+);
+alter table stock
+auto_increment = 2000;
+
+alter table product add foreign key (supplier_id) references suppliers(supplier_id)
+on delete cascade;
+
+insert into product (product_name, description, supplier_id)
+values
+	  ('Books', 'Books of various Geners',null),
+      ('Bottles', 'Water bottles with various shapes',null),
+      ('Speakers', 'Speakers having wide variety of sound DBs', null),
+      ('Camera', 'Wide Range of cameras with various mexapixel lenses', null);
+      
+insert into suppliers (supplier_name, location)
+values('Unique Books enterprise', 'London'),
+('RC Bottles LTD', 'Sydney'),
+('Boat', 'Mumbai'),
+('Nikon', 'USA');
+
+update product
+set supplier_id = case product_name
+when 'Books' then 1000
+when 'Bottles' then 1001
+when 'Speakers' then 1002
+when 'Camera' then 1003
+end
+where product_name In('Books','Bottles', 'Speakers', 'Camera');
+
+insert into stock (product_id,balance_stock)
+values (100, 250),
+(101,300),
+(102, 150),
+(103,25);
+
+
+

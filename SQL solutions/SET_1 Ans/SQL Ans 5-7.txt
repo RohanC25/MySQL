@@ -1,0 +1,129 @@
+Enter password: *********
+Welcome to the MySQL monitor.  Commands end with ; or \g.
+Your MySQL connection id is 20
+Server version: 8.0.33 MySQL Community Server - GPL
+
+Copyright (c) 2000, 2023, Oracle and/or its affiliates.
+
+Oracle is a registered trademark of Oracle Corporation and/or its
+affiliates. Other names may be trademarks of their respective
+owners.
+
+Type 'help;' or '\h' for help. Type '\c' to clear the current input statement.
+
+mysql> use `assignment`;
+Database changed
+mysql> create table product(
+    -> product_id INT primary key auto_increment = 100,
+    -> product_name varchar(25) not null UNIQUE,
+    -> description varchar(100),
+    -> supplier_id INT
+    -> );
+ERROR 1064 (42000): You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near '= 100,
+product_name varchar(25) not null UNIQUE,
+description varchar(100),
+suppl' at line 2
+mysql> create table product(
+    -> product_id INT primary key auto_increment = 100,
+    -> ;
+ERROR 1064 (42000): You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near '= 100,' at line 2
+mysql> create table product(
+    -> product_id INT primary key auto_increment,
+    -> product_name varchar(25) not null UNIQUE,
+    -> description varchar(100),
+    -> supplier_id INT);
+Query OK, 0 rows affected (0.03 sec)
+
+mysql> alter table product
+    -> auto_increment = 100;
+Query OK, 0 rows affected (0.01 sec)
+Records: 0  Duplicates: 0  Warnings: 0
+
+mysql> create table suppliers(
+    -> supplier_id INT primary key auto_increment,
+    -> supplier_name varchar(25),
+    -> location varchar(25)
+    -> );
+Query OK, 0 rows affected (0.02 sec)
+
+mysql> alter table suppliers
+    -> auto_increment = 1000;
+Query OK, 0 rows affected (0.01 sec)
+Records: 0  Duplicates: 0  Warnings: 0
+
+mysql> create table stock
+    -> (id INT primary key auto_increment,
+    -> product_id INT,
+    -> balance_stock INT,
+    -> foreign key(product_id) references product(product_id)
+    -> on delete set NULL);
+Query OK, 0 rows affected (0.02 sec)
+
+mysql> alter table stock
+    -> auto_increment = 2000;
+Query OK, 0 rows affected (0.01 sec)
+Records: 0  Duplicates: 0  Warnings: 0
+
+mysql> insert into product (product_name, description, supplier_id)values  ('Books', 'Books of various Geners',null),      ('Bottles', 'Water bottles with various shapes',null),      ('Speakers', 'Speakers having wide variety of sound DBs', null),      ('Camera', 'Wide Range of cameras with various mexapixel lenses', null);
+Query OK, 4 rows affected (0.00 sec)
+Records: 4  Duplicates: 0  Warnings: 0
+
+mysql> insert into suppliers (supplier_name, location)values('Unique Books enterprise', 'London'),('RC Bottles LTD', 'Sydney'),('Boat', 'Mumbai'),('Nikon', 'USA');
+Query OK, 4 rows affected (0.00 sec)
+Records: 4  Duplicates: 0  Warnings: 0
+
+mysql> update productset supplier_id = case product_namewhen 'Books' then 1000when 'Bottles' then 1001when 'Speakers' then 1002when 'Camera' then 1003endwhere product_name In('Books','Bottles', 'Speakers', 'Camera');
+ERROR 1064 (42000): You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near '= case product_namewhen 'Books' then 1000when 'Bottles' then 1001when 'Speakers'' at line 1
+mysql> update productset supplier_id = case product_namewhen 'Books' then 1000when 'Bottles' then 1001when 'Speakers' then 1002when 'Camera' then 1003endwhere product_name In('Books','Bottles', 'Speakers', 'Camera');
+ERROR 1064 (42000): You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near '= case product_namewhen 'Books' then 1000when 'Bottles' then 1001when 'Speakers'' at line 1
+mysql> update product set supplier_id = case product_name when 'Books' then 1000 when 'Bottles' then 1001 when 'Speakers' then 1002 when 'Camera' then 1003 end where product_name In('Books','Bottles', 'Speakers', 'Camera');
+Query OK, 4 rows affected (0.01 sec)
+Rows matched: 4  Changed: 4  Warnings: 0
+
+mysql> insert into stock (product_id,balance_stock)values (100, 250),(101,300),(102, 150),(103,25);
+Query OK, 4 rows affected (0.00 sec)
+Records: 4  Duplicates: 0  Warnings: 0
+
+mysql> select * from product;
++------------+--------------+-----------------------------------------------------+-------------+
+| product_id | product_name | description                                         | supplier_id |
++------------+--------------+-----------------------------------------------------+-------------+
+|        100 | Books        | Books of various Geners                             |        1000 |
+|        101 | Bottles      | Water bottles with various shapes                   |        1001 |
+|        102 | Speakers     | Speakers having wide variety of sound DBs           |        1002 |
+|        103 | Camera       | Wide Range of cameras with various mexapixel lenses |        1003 |
++------------+--------------+-----------------------------------------------------+-------------+
+4 rows in set (0.00 sec)
+
+mysql> select * from suppliers;
++-------------+-------------------------+----------+
+| supplier_id | supplier_name           | location |
++-------------+-------------------------+----------+
+|        1000 | Unique Books enterprise | London   |
+|        1001 | RC Bottles LTD          | Sydney   |
+|        1002 | Boat                    | Mumbai   |
+|        1003 | Nikon                   | USA      |
++-------------+-------------------------+----------+
+4 rows in set (0.00 sec)
+
+mysql> select * from stock;
++------+------------+---------------+
+| id   | product_id | balance_stock |
++------+------------+---------------+
+| 2000 |        100 |           250 |
+| 2001 |        101 |           300 |
+| 2002 |        102 |           150 |
+| 2003 |        103 |            25 |
++------+------------+---------------+
+4 rows in set (0.00 sec)
+
+mysql> drop table stock;
+Query OK, 0 rows affected (0.01 sec)
+
+mysql> drop table suppliers;
+Query OK, 0 rows affected (0.01 sec)
+
+mysql> drop table product;
+Query OK, 0 rows affected (0.01 sec)
+
+mysql>

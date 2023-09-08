@@ -1,0 +1,292 @@
+---> Que 1 to 4 Answers
+
+Enter password: *********
+Welcome to the MySQL monitor.  Commands end with ; or \g.
+Your MySQL connection id is 10
+Server version: 8.0.33 MySQL Community Server - GPL
+
+Copyright (c) 2000, 2023, Oracle and/or its affiliates.
+
+Oracle is a registered trademark of Oracle Corporation and/or its
+affiliates. Other names may be trademarks of their respective
+owners.
+
+Type 'help;' or '\h' for help. Type '\c' to clear the current input statement.
+
+mysql> use `assignment`;
+Database changed
+mysql> select * from countries;
+Empty set (0.00 sec)
+
+mysql> insert into countries values('China', 1382, 'Beijing');
+Query OK, 1 row affected (0.06 sec)
+
+mysql> insert into countries values('India', 1326, 'Delhi');
+Query OK, 1 row affected (0.02 sec)
+
+mysql> insert into countries values('United states', 324, 'Washington D.C.');
+Query OK, 1 row affected (0.00 sec)
+
+mysql> insert into countries values('Indonesia', 260, 'Jakarta');
+Query OK, 1 row affected (0.00 sec)
+
+mysql> insert into countries values('Brazil', 209, 'Brasilia');
+Query OK, 1 row affected (0.00 sec)
+
+mysql> insert into countries values('Pakistan', 193, 'Islamabad');
+Query OK, 1 row affected (0.00 sec)
+
+mysql> insert into countries values('Nigeria', 187, 'Abuja');
+Query OK, 1 row affected (0.00 sec)
+
+mysql> insert into countries values('Bangladesh', 163, 'Dhaka');
+Query OK, 1 row affected (0.01 sec)
+
+mysql> insert into countries values('Russia', 143, 'Moscow');
+Query OK, 1 row affected (0.00 sec)
+
+mysql> insert into countries values('Mexico', 128, 'Mexico City');
+Query OK, 1 row affected (0.03 sec)
+
+mysql> insert into countries values('Japan', 126, 'Tokyo');
+Query OK, 1 row affected (0.00 sec)
+
+mysql> insert into countries values('Philippines', 102, 'Manila');
+Query OK, 1 row affected (0.00 sec)
+
+mysql> insert into countries values('Ethiopia', 101, 'Addis Ababa');
+Query OK, 1 row affected (0.00 sec)
+
+mysql> insert into countries values('Vietnam', 94, 'Hanoi');
+Query OK, 1 row affected (0.00 sec)
+
+mysql> insert into countries values('Egypt', 93, 'Cairo');
+Query OK, 1 row affected (0.00 sec)
+
+mysql> insert into countries values('Germany', 81, 'Berlin');
+Query OK, 1 row affected (0.00 sec)
+
+mysql> insert into countries values('Iran', 80, 'Tehran');
+Query OK, 1 row affected (0.00 sec)
+
+mysql> insert into countries values('Turkey', 79, 'Ankara');
+Query OK, 1 row affected (0.00 sec)
+
+mysql> insert into countries values('Congo', 79, 'Kinshasa');
+Query OK, 1 row affected (0.00 sec)
+
+mysql> insert into countries values('France', 64, 'Paris');
+Query OK, 1 row affected (0.00 sec)
+
+mysql> insert into countries values('United Kingdom', 65, 'London');
+Query OK, 1 row affected (0.00 sec)
+
+mysql> insert into countries values('Italy', 60, 'Rome');
+Query OK, 1 row affected (0.00 sec)
+
+mysql> insert into countries values('South Africa', 55, 'Pretoria');
+Query OK, 1 row affected (0.00 sec)
+
+mysql> insert into countries values('Myanmar', 54, 'Naypyidaw');
+Query OK, 1 row affected (0.00 sec)
+
+mysql> insert into countries values('Colombia', 52, 'Bogota');
+Query OK, 1 row affected (0.00 sec)
+
+mysql> insert into countries values('Singapore', 54, 'Singapore');
+Query OK, 1 row affected (0.00 sec)
+
+mysql> insert into countries values('Kenya', 45, 'Nairobi');
+Query OK, 1 row affected (0.00 sec)
+
+mysql> select * from countries;
++----------------+------------+-----------------+
+| name           | population | capital         |
++----------------+------------+-----------------+
+| Bangladesh     |        163 | Dhaka           |
+| Brazil         |        209 | Brasilia        |
+| China          |       1382 | Beijing         |
+| Colombia       |         52 | Bogota          |
+| Congo          |         79 | Kinshasa        |
+| Egypt          |         93 | Cairo           |
+| Ethiopia       |        101 | Addis Ababa     |
+| France         |         64 | Paris           |
+| Germany        |         81 | Berlin          |
+| India          |       1326 | Delhi           |
+| Indonesia      |        260 | Jakarta         |
+| Iran           |         80 | Tehran          |
+| Italy          |         60 | Rome            |
+| Japan          |        126 | Tokyo           |
+| Mexico         |        128 | Mexico City     |
+| Myanmar        |         54 | Naypyidaw       |
+| Nigeria        |        187 | Abuja           |
+| Pakistan       |        193 | Islamabad       |
+| Philippines    |        102 | Manila          |
+| Russia         |        143 | Moscow          |
+| South Africa   |         55 | Pretoria        |
+| Singapore      |         54 | Singapore       |
+| Turkey         |         79 | Ankara          |
+| Kenya          |         45 | Nairobi         |
+| United Kingdom |         65 | London          |
+| United states  |        324 | Washington D.C. |
+| Vietnam        |         94 | Hanoi           |
++----------------+------------+-----------------+
+27 rows in set (0.03 sec)
+
+mysql> update countries set capital = 'New Delhi' where name = 'India';
+Query OK, 0 rows affected (0.00 sec)
+Rows matched: 1  Changed: 0  Warnings: 0
+
+mysql> select * from countries;
++----------------+------------+-----------------+
+| name           | population | capital         |
++----------------+------------+-----------------+
+| Bangladesh     |        163 | Dhaka           |
+| Brazil         |        209 | Brasilia        |
+| China          |       1382 | Beijing         |
+| Colombia       |         52 | Bogota          |
+| Congo          |         79 | Kinshasa        |
+| Egypt          |         93 | Cairo           |
+| Ethiopia       |        101 | Addis Ababa     |
+| France         |         64 | Paris           |
+| Germany        |         81 | Berlin          |
+| India          |       1326 | New Delhi       |
+| Indonesia      |        260 | Jakarta         |
+| Iran           |         80 | Tehran          |
+| Italy          |         60 | Rome            |
+| Japan          |        126 | Tokyo           |
+| Mexico         |        128 | Mexico City     |
+| Myanmar        |         54 | Naypyidaw       |
+| Nigeria        |        187 | Abuja           |
+| Pakistan       |        193 | Islamabad       |
+| Philippines    |        102 | Manila          |
+| Russia         |        143 | Moscow          |
+| South Africa   |         55 | Pretoria        |
+| Singapore      |         54 | Singapore       |
+| Turkey         |         79 | Ankara          |
+| Kenya          |         45 | Nairobi         |
+| United Kingdom |         65 | London          |
+| United states  |        324 | Washington D.C. |
+| Vietnam        |         94 | Hanoi           |
++----------------+------------+-----------------+
+27 rows in set (0.00 sec)
+
+mysql> select * from countries order by population desc;
++----------------+------------+-----------------+
+| name           | population | capital         |
++----------------+------------+-----------------+
+| China          |       1382 | Beijing         |
+| India          |       1326 | New Delhi       |
+| United states  |        324 | Washington D.C. |
+| Indonesia      |        260 | Jakarta         |
+| Brazil         |        209 | Brasilia        |
+| Pakistan       |        193 | Islamabad       |
+| Nigeria        |        187 | Abuja           |
+| Bangladesh     |        163 | Dhaka           |
+| Russia         |        143 | Moscow          |
+| Mexico         |        128 | Mexico City     |
+| Japan          |        126 | Tokyo           |
+| Philippines    |        102 | Manila          |
+| Ethiopia       |        101 | Addis Ababa     |
+| Vietnam        |         94 | Hanoi           |
+| Egypt          |         93 | Cairo           |
+| Germany        |         81 | Berlin          |
+| Iran           |         80 | Tehran          |
+| Congo          |         79 | Kinshasa        |
+| Turkey         |         79 | Ankara          |
+| United Kingdom |         65 | London          |
+| France         |         64 | Paris           |
+| Italy          |         60 | Rome            |
+| South Africa   |         55 | Pretoria        |
+| Myanmar        |         54 | Naypyidaw       |
+| Colombia       |         52 | Bogota          |
+| Singapore      |         54 | Singapore       |
+| Kenya          |         45 | Nairobi         |
++----------------+------------+-----------------+
+27 rows in set (0.00 sec)
+
+mysql>rename table countries to big_countries;
+Query OK, 0 rows affected (0.00 sec)
+
+mysql> select * from big_countries;
++----------------+------------+----------------+
+| name           | population | capital        |
++----------------+------------+----------------+
+| China          |       1382 | Beijing        |
+| India          |       1326 | New Delhi      |
+| United States  |        324 | Washington D.C |
+| Indonesia      |        260 | Jakarta        |
+| Brazil         |        209 | Brasilia       |
+| Pakistan       |        193 | Islamabad      |
+| Nigeria        |        187 | Abuja          |
+| Bangladesh     |        163 | Dhaka          |
+| Russia         |        143 | Moscow         |
+| Mexico         |        128 | Mexico City    |
+| Japan          |        126 | Tokyo          |
+| Philippines    |        102 | Manila         |
+| Ethiopia       |        101 | Addis Ababa    |
+| Vietnam        |         94 | Hanoi          |
+| Egypt          |         93 | Cairo          |
+| Germany        |         81 | Berlin         |
+| Iran           |         80 | Tehran         |
+| Turkey         |         79 | Ankara         |
+| Congo          |         79 | Kinshasa       |
+| France         |         64 | Paris          |
+| United Kingdom |         65 | London         |
+| Italy          |         60 | Rome           |
+| South Africa   |         55 | Pretoria       |
+| Myanmar        |         54 | Naypyidaw      |
+| Colombia       |         71 | Bogota         |
+| Singapore      |         54 | Singapore      |
+| Kenya          |         45 | Nairobi        |
++----------------+------------+----------------+
+27 rows in set (0.00 sec)
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

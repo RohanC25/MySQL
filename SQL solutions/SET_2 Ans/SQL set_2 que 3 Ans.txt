@@ -1,0 +1,11 @@
+select * from station where id % 2 = 0;
+
+select *, count(*) as CNT
+from station
+where id % 2 = 0 
+GROUP BY id, city, state, lat_n, long_w
+having CNT = 1;
+
+select * from station where id % 2 = 0 
+group by id, city, state, lat_n, long_w
+having COUNT(*) = 1;

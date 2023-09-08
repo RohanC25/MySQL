@@ -1,0 +1,7 @@
+---> SQL Set_2 que 6 Ans
+
+
+select emp_no,CONCAT(first_name,' ',last_name) as full_name,salary,hire_date,
+timestampdiff(Month,hire_date,current_date) as Total_months_hired from emp
+where salary>2000
+having Total_months_hired < 36 ;
